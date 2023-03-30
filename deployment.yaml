@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-argocd
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: go-argocd
+  template:
+    metadata:
+      labels:
+        app: go-argocd
+    spec:
+      containers:
+      - image: eduardomarcon/go-argocd:1.0.0
+        name: go-argocd
+        ports:
+        - containerPort: 8080
