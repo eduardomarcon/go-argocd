@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: go-argocd
 spec:
-  replicas: 2
-  revisionHistoryLimit: 2
+  replicas: 3
+  revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: go-argocd
@@ -14,7 +14,7 @@ spec:
         app: go-argocd
     spec:
       containers:
-      - image: eduardomarcon/go-argocd:1.0.4
+      - image: eduardomarcon/go-argocd:1.0.5
         name: go-argocd
         ports:
         - containerPort: 8080
