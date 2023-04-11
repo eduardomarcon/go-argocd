@@ -14,7 +14,7 @@ spec:
         app: go-argocd
     spec:
       containers:
-      - image: eduardomarcon/go-argocd:1.0.2
+      - image: eduardomarcon/go-argocd:1.0.3
         name: go-argocd
         ports:
         - containerPort: 8080
