@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: go-argocd
 spec:
-  replicas: 9
+  replicas: 3
   selector:
     matchLabels:
       app: go-argocd
