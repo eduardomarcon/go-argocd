@@ -3,8 +3,7 @@ kind: Deployment
 metadata:
   name: go-argocd
 spec:
-  replicas: 3
-  revisionHistoryLimit: 3
+  replicas: 5
   selector:
     matchLabels:
       app: go-argocd
